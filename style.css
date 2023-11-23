@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #D55A59;
+    background: linear-gradient(135deg, #D55A59, #f5ff86);
+    background-attachment: fixed;
+    font-family: 'Lato', sans-serif;
+}
+
+#container{
+    display: flex;
+    margin: 30px auto;
+    max-width: 1200px;
+    min-width: 400px;
+    background-color: whitesmoke;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 30px;
+    gap: 30px;
+}
+
+h1{
+    align-self: center ;
+}
+
+#input-task{
+    margin-right: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    border-radius: 5px;
+    padding: 3px 3px;
+}
+
+#add-button{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    border-radius: 5px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.task{
+   
+}
