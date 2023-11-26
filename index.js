@@ -3,7 +3,7 @@ const addButton = document.querySelector('.add-button');
 const taskBox = document.querySelector('#task-box');
 
 let textInput;
-let task; // Defina a variável task fora da função createTask
+let task; 
 
 inputTask.addEventListener('input', function (e) {
     textInput = this.value;
@@ -18,6 +18,8 @@ addButton.addEventListener('click', function (e) {
         createTask(textInput);
         saveTasks();
     }
+
+    textInput = '';
 });
 
 document.addEventListener('keypress', function (e) {
@@ -31,6 +33,8 @@ document.addEventListener('keypress', function (e) {
             saveTasks();
         }
     }
+
+    textInput = '';
 });
 
 function createTask(textInput) {
@@ -91,7 +95,7 @@ function editSave() {
     clean();
     saveTasks();
 
-    // Atualize a variável textInput após a edição
+
     textInput = inputTask.value;
 }
 

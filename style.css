@@ -27,8 +27,13 @@ body{
     gap: 30px;
 }
 
+#input-box{
+    font-size: 20px;
+}
+
 h1{
     align-self: center ;
+    font-size: 40px;
 }
 
 #input-task{
@@ -36,6 +41,9 @@ h1{
     border: 1px solid rgba(0, 0, 0, 0.459);
     border-radius: 5px;
     padding: 3px 3px;
+    height: 20px;
+    font-size: 18px;
+    width: auto;
 }
 
 #add-button{
@@ -43,10 +51,11 @@ h1{
     border: 1px solid rgba(0, 0, 0, 0.459);
     border-radius: 5px;
     padding: 4px;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .task-container{
+    font-size: 20px;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -66,4 +75,8 @@ button{
     border: 1px solid rgba(0, 0, 0, 0.488);
     border-radius: 3px;
     padding: 5px;
+}
+
+.edit-button{
+    margin-left: 10px;
 }
