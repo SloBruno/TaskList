@@ -2,6 +2,7 @@ const inputTask = document.querySelector('#input-task');
 const addButton = document.querySelector('.add-button');
 const taskBox = document.querySelector('#task-box');
 
+
 let textInput;
 let task; 
 
@@ -49,8 +50,15 @@ function createTask(textInput) {
     taskContainer.innerHTML = "<i class='bx bxs-circle'></i>";
 
     task = document.createElement('p');
+    hour = document.createElement('p');
+    hour.classList.add('date');
     task.classList.add('task');
     task.innerText = textInput;
+    const currentDate = createDate();
+    const currentTime = criardata();
+    hour.innerText = currentDate + "  " + currentTime;
+
+
 
     const deleteButton = document.createElement('button');
     const editButton = document.createElement('button');
@@ -71,6 +79,7 @@ function createTask(textInput) {
     taskContainer.appendChild(task);
     taskContainer.appendChild(deleteButton);
     taskContainer.appendChild(editButton);
+    taskContainer.appendChild(hour);
     taskBox.appendChild(taskContainer);
 
     textInput = '';
@@ -133,4 +142,25 @@ function addSavedTasks() {
     }
 }
 
+function createDate(){
+    const date = new Date();
+    dia  = date.getDate().toString(),
+    diaF = (dia.length == 1) ? '0'+dia : dia,
+    mes  = (date.getMonth()+1).toString(), //+1 pois no getMonth Janeiro começa com zero.
+    mesF = (mes.length == 1) ? '0'+mes : mes,
+    anoF = date.getFullYear();
+
+    return diaF+"/"+mesF+"/"+anoF;
+    }
+
+function criardata(){
+    const data = new Date();
+    return data.toLocaleTimeString('pt-BR', {
+        hour12: false,
+        timeZone: 'UTC'
+    });
+}
+
 addSavedTasks();
+
+console.log(createDate(), criardata());
